@@ -1,0 +1,7 @@
+- name: Student A
+  role: PhD student (2023—)
+  link: https://example.com
+  note: Working on domain shift & evaluation.
+
+- name: Student B
+  role: MSc student (2024—2025)

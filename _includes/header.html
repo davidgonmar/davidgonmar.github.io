@@ -1,0 +1,21 @@
+<header class="border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a class="font-bold" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      {% for item in site.nav %}
+        <a class="hover:underline" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="rounded-lg border px-3 py-1 text-sm dark:border-gray-700" data-toggle-theme>🌓</button>
+      <button class="md:hidden rounded-lg border px-3 py-1 text-sm dark:border-gray-700" onclick="document.getElementById('mnav').classList.toggle('hidden')">Menu</button>
+    </div>
+  </div>
+  <div id="mnav" class="md:hidden hidden px-4 pb-4">
+    <nav class="flex flex-col gap-3 text-sm">
+      {% for item in site.nav %}
+        <a class="hover:underline" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

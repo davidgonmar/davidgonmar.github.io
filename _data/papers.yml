@@ -1,0 +1,19 @@
+- title: "BALF: Budgeted Activation-Aware Low-Rank Factorization for Fine-Tuning-Free Model Compression"
+  authors: ["David González-Martínez"]
+  venue: "arXiv"
+  year: 2025
+  pdf: "https://arxiv.org/pdf/2509.25136"
+  code: null
+  doi: "10.48550/arXiv.2509.25136"
+  featured: true
+  abstract: ""
+  bibtex: |
+    @misc{gonzalez-martinez2025balf,
+      title        = {BALF: Budgeted Activation-Aware Low-Rank Factorization for Fine-Tuning-Free Model Compression},
+      author       = {David González-Martínez},
+      year         = {2025},
+      eprint       = {2509.25136},
+      archivePrefix= {arXiv},
+      primaryClass = {cs.LG},
+      doi          = {10.48550/arXiv.2509.25136}
+    }

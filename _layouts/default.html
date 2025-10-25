@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  {% include head.html %}
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans">
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-yellow-200">Skip to content</a>
+  {% include header.html %}
+  <main id="content" class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+title: "David González-Martínez"
+tagline: "M.Sc. student at the University of Tübingen"
+description: "Research focus and interests."
+url: "https://davidgonmar.com"
+baseurl: ""
+lang: en
+timezone: Europe/Berlin
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+theme: null
+sass:
+  style: compressed
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - assets/css/tailwind.css
+
+author:
+  name: "David González-Martínez"
+  url: "https://davidgonmar.com"
+
+social:
+  twitter: "_davidgonmar"
+  github: "davidgonmar"
+  scholar: "ftQvY4UAAAAJ"
+
+nav:
+  - title: Publications
+    url: /publications/
+  - title: Contact
+    url: /contact/

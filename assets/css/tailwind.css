@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.prose img { border-radius: 0.75rem; }
+
+.prose {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.prose pre {
+  overflow-x: auto;
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.prose img,
+.prose video,
+.prose iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+pre { overflow-x: auto; }
