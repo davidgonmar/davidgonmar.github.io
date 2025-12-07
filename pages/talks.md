@@ -4,6 +4,7 @@ title: Talks
 permalink: /talks/
 ---
 
+Empty!
 <ul class="space-y-4">
 {% for t in site.data.talks %}
 <li class="rounded-xl border border-gray-200 dark:border-gray-800 p-4">

@@ -1,20 +1,36 @@
-<div class="rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-  <div class="text-sm text-gray-500 dark:text-gray-400">{{ pub.venue }}{% if pub.year %} • {{ pub.year }}{% endif %}</div>
-  <h3 class="font-semibold">{{ pub.title }}</h3>
+<div class="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 min-w-0">
+  <div class="text-sm text-gray-500 dark:text-gray-400">
+    {{ pub.venue }}{% if pub.year %} • {{ pub.year }}{% endif %}
+  </div>
+  <h3 class="font-semibold" style="margin:0!important">{{ pub.title }}</h3>
   <p class="text-sm text-gray-700 dark:text-gray-300">
     {% for a in pub.authors %}{% if forloop.first == false %}, {% endif %}{{ a }}{% endfor %}
   </p>
+
   <div class="mt-3 flex flex-wrap gap-2 text-sm">
     {% if pub.pdf %}<a class="underline" href="{{ pub.pdf }}">PDF</a>{% endif %}
     {% if pub.code %}<a class="underline" href="{{ pub.code }}">Code</a>{% endif %}
     {% if pub.doi %}<a class="underline" href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
-    {% if pub.bibtex %}
-      <details class="rounded border px-2 py-1 dark:border-gray-700">
-        <summary class="cursor-pointer">BibTeX</summary>
-<pre class="text-xs overflow-x-auto">{{ pub.bibtex | strip }}</pre>
-      </details>
-    {% endif %}
   </div>
+
+  {% if pub.bibtex %}
+    <details class="mt-3 rounded border px-2 py-1 dark:border-gray-700">
+      <summary class="cursor-pointer text-sm underline flex items-center justify-between gap-2">
+        <span>BibTeX</span>
+        <button
+          type="button"
+          data-copy-bibtex
+          class="text-[11px]"
+        >
+          Copy
+        </button>
+      </summary>
+      <div class="mt-2 w-140">
+        <pre class="text-xs">{{ pub.bibtex | strip }}</pre>
+      </div>
+    </details>
+  {% endif %}
+
   {% if pub.abstract %}
     <details class="mt-3">
       <summary class="cursor-pointer text-sm underline">Abstract</summary>

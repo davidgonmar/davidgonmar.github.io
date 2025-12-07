@@ -1,47 +1,55 @@
 ---
 layout: default
 ---
-<section class="grid gap-8 lg:grid-cols-3">
-  <div class="lg:col-span-2">
-    <div class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">{{ site.title }}</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300">{{ site.tagline }}</p>
-    </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <div class="prose dark:prose-invert max-w-none">
-      {{ content }}
-    </div>
+<section class="space-y-8">
+  <header class="mb-4">
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">{{ site.title }}</h1>
+    <p class="text-sm text-gray-600 dark:text-gray-300">
+      david.gonzalez-martinez "at" tuebingen "dot" mpg "dot" de
+    </p>
+    <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+      {{ site.tagline }}
+    </p>
 
-    <!-- News -->
-    <section class="mt-10">
-      <h2 class="text-2xl font-semibold mb-4">News</h2>
-      <ul class="space-y-4">
-        {% for item in site.data.news limit: 8 %}
-          {% include news-item.html item=item %}
-        {% endfor %}
-      </ul>
-    </section>
-    <script
-      type="text/javascript"
-      id="clustrmaps"
-      src="//clustrmaps.com/map_v2.js?d=FJ5Mzl5rCFLl32ybr4o36_5cc0XF9a7I8VLZloTsUOE&cl=ffffff&w=a">
-    </script>
+    <div class="mt-4 flex items-center gap-10 w-full text-gray-500 dark:text-gray-400">
+      <a
+        href="https://scholar.google.com/citations?user={{ site.social.scholar }}"
+        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
+        aria-label="Google Scholar"
+      >
+        <i class="fa-solid fa-graduation-cap" style="font-size: 3rem;"></i>
+      </a>
+      <a
+        href="https://github.com/{{ site.social.github }}"
+        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
+        aria-label="GitHub"
+      >
+        <i class="fa-brands fa-github" style="font-size: 3rem;"></i>
+      </a>
+      <a
+        href="https://twitter.com/{{ site.social.twitter }}"
+        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
+        aria-label="Twitter/X"
+      >
+        <i class="fa-brands fa-x-twitter" style="font-size: 3rem;"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="prose dark:prose-invert">
+    {{ content }}
   </div>
 
-  <aside class="space-y-6">
-    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-      <h3 class="font-semibold mb-2">Contact</h3>
-      <p class="text-sm text-gray-600 dark:text-gray-300">
-        <a class="underline">dagoma0033 "at" gmail "dot" com</a>
-      </p>
-    </div>
-    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
-      <h3 class="font-semibold mb-2">Links</h3>
-      <ul class="list-disc list-inside text-sm">
-        <li><a class="underline" href="https://scholar.google.com/citations?user={{ site.social.scholar }}">Google Scholar</a></li>
-        <li><a class="underline" href="https://github.com/{{ site.social.github }}">GitHub</a></li>
-        <li><a class="underline" href="https://twitter.com/{{ site.social.twitter }}">Twitter/X</a></li>
-      </ul>
-    </div>
-  </aside>
+  <section class="mt-6">
+    <h2 class="text-2xl font-semibold mb-4">News</h2>
+    <ul class="space-y-4">
+      {% for item in site.data.news limit: 8 %}
+        {% include news-item.html item=item %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8cbd28c6f33f46f9a81b1dca658cb824"}'></script>
 </section>

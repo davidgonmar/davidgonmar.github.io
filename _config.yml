@@ -1,6 +1,6 @@
 title: "David González-Martínez"
-tagline: "M.Sc. student at the University of Tübingen"
-description: "Research focus and interests."
+tagline: ""
+description: ""
 url: "https://davidgonmar.github.io"
 baseurl: ""
 lang: en
@@ -39,5 +39,3 @@ social:
 nav:
   - title: Publications
     url: /publications/
-  - title: Contact
-    url: /contact/

@@ -1,12 +1,51 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}" class="scroll-smooth">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
   {% include head.html %}
+  <script>
+  document.addEventListener('click', async (event) => {
+    const btn = event.target.closest('[data-copy-bibtex]');
+    if (!btn) return;
+
+    const details = btn.closest('details');
+    if (!details) return;
+
+    const pre = details.querySelector('pre');
+    if (!pre) return;
+
+    const text = pre.textContent;
+    const original = btn.textContent;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1200);
+    } catch (err) {
+      btn.textContent = 'Copy failed';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1200);
+    }
+  });
+
+</script>
+<style>
+  pre {
+  width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+  box-sizing: border-box;
+}
+</style>
+
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans">
   <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-yellow-200">Skip to content</a>

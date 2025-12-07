@@ -3,10 +3,10 @@
   venue: "arXiv"
   year: 2025
   pdf: "https://arxiv.org/pdf/2509.25136"
-  code: null
+  code: https://github.com/davidgonmar/BALF
   doi: "10.48550/arXiv.2509.25136"
   featured: true
-  abstract: ""
+  abstract: null
   bibtex: |
     @misc{gonzalez-martinez2025balf,
       title        = {BALF: Budgeted Activation-Aware Low-Rank Factorization for Fine-Tuning-Free Model Compression},
