@@ -17,3 +17,22 @@
       primaryClass = {cs.LG},
       doi          = {10.48550/arXiv.2509.25136}
     }
+- title: "SLORR: Simple and Efficient In-Training Low-Rank Regularization"
+  authors: ["David González-Martínez", "Shiwei Liu"]
+  venue: "arXiv"
+  year: 2026
+  pdf: "https://arxiv.org/pdf/2607.08754"
+  code: https://github.com/davidgonmar/SLORR
+  doi: "10.48550/arXiv.2607.08754"
+  featured: true
+  abstract: null
+  bibtex: |
+    @misc{gonzalezmartinez2026slorr,
+      title        = {SLORR: Simple and Efficient In-Training Low-Rank Regularization},
+      author       = {David González-Martínez and Shiwei Liu},
+      year         = {2026},
+      eprint       = {2607.08754},
+      archivePrefix= {arXiv},
+      primaryClass = {cs.LG},
+      doi          = {10.48550/arXiv.2607.08754}
+    }
