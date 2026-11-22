@@ -40,7 +40,7 @@ strong { font-weight: 600; }
 .theme-toggle { background: none; border: 0; padding: 0; cursor: pointer; color: var(--muted); font: inherit; font-size: 16px; }
 .theme-toggle:hover { color: var(--text); }
 
-main { padding: 96px 0 24px; }
+main.wrap { padding-top: 96px; padding-bottom: 24px; }
 
 h1 { font-size: 28px; line-height: 1.2; font-weight: 600; margin: 0 0 4px; }
 h2 { font-size: 25px; line-height: 1.25; font-weight: 600; margin: 52px 0 16px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
@@ -106,4 +106,4 @@ p { margin: 0 0 10px; }
   .equal-note { margin-left: 0; }
 }
 
-@media (max-width: 520px) { main { padding-top: 56px; } }
+@media (max-width: 520px) { main.wrap { padding-top: 56px; } }
