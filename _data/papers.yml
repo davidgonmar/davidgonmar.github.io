@@ -1,7 +1,8 @@
 - title: "BALF: Budgeted Activation-Aware Low-Rank Factorization for Fine-Tuning-Free Model Compression"
   authors: ["David González-Martínez"]
-  venue: "arXiv"
+  venue: "TMLR 2026"
   year: 2025
+  date: 2025-09-29
   pdf: "https://arxiv.org/pdf/2509.25136"
   code: https://github.com/davidgonmar/BALF
   doi: "10.48550/arXiv.2509.25136"
@@ -19,8 +20,9 @@
     }
 - title: "SLORR: Simple and Efficient In-Training Low-Rank Regularization"
   authors: ["David González-Martínez", "Shiwei Liu"]
-  venue: "arXiv"
+  venue: "NeurIPS 2026 ODI Workshop"
   year: 2026
+  date: 2026-07-09
   pdf: "https://arxiv.org/pdf/2607.08754"
   code: https://github.com/davidgonmar/SLORR
   doi: "10.48550/arXiv.2607.08754"
@@ -35,4 +37,68 @@
       archivePrefix= {arXiv},
       primaryClass = {cs.LG},
       doi          = {10.48550/arXiv.2607.08754}
+    }
+- title: "Depth Memory"
+  authors: ["David González-Martínez", "Philipp Nazari", "T. Konstantin Rusch", "Shiwei Liu"]
+  equal: 2
+  venue: "arXiv"
+  year: 2026
+  date: 2026-10-13
+  pdf: "https://arxiv.org/pdf/2610.18809"
+  code: https://github.com/davidgonmar/depth-memory
+  links:
+    - name: checkpoints
+      url: https://huggingface.co/collections/davidgonmar/depth-memory-6ac5045a1bd8e798d2ed1392
+  doi: "10.48550/arXiv.2610.18809"
+  featured: true
+  abstract: null
+  bibtex: |
+    @misc{gonzalezmartinez2026depthmemory,
+      title        = {Depth Memory},
+      author       = {David González-Martínez and Philipp Nazari and T. Konstantin Rusch and Shiwei Liu},
+      year         = {2026},
+      eprint       = {2610.18809},
+      archivePrefix= {arXiv},
+      primaryClass = {cs.LG},
+      doi          = {10.48550/arXiv.2610.18809}
+    }
+- title: "ISO: An RLVR-Native Optimization Stack"
+  authors: ["Hanqing Zhu", "Wenyan Cong", "Zhizhou Sha", "Sagnik Mukherjee", "Xinyuan Song", "David González-Martínez", "Xiaoxia Wu", "Yuandong Tian", "Shiwei Liu", "David Z. Pan", "Zhangyang Wang"]
+  equal: 2
+  venue: "arXiv"
+  year: 2026
+  date: 2026-07-21
+  pdf: "https://arxiv.org/pdf/2607.19331"
+  code: https://github.com/zhuhanqing/ISO
+  doi: "10.48550/arXiv.2607.19331"
+  abstract: null
+  bibtex: |
+    @misc{zhu2026iso,
+      title        = {ISO: An RLVR-Native Optimization Stack},
+      author       = {Hanqing Zhu and Wenyan Cong and Zhizhou Sha and Sagnik Mukherjee and Xinyuan Song and David González-Martínez and Xiaoxia Wu and Yuandong Tian and Shiwei Liu and David Z. Pan and Zhangyang Wang},
+      year         = {2026},
+      eprint       = {2607.19331},
+      archivePrefix= {arXiv},
+      primaryClass = {cs.LG},
+      doi          = {10.48550/arXiv.2607.19331}
+    }
+- title: "DepthBench: Measuring How Residual Connections Enable More Computational Depth"
+  authors: ["Keyu Wang", "Yangyi Huang", "Jiale Kang", "David González-Martínez", "Weiyang Liu", "Shiwei Liu"]
+  equal: 2
+  venue: "arXiv"
+  year: 2026
+  date: 2026-09-26
+  pdf: "https://arxiv.org/pdf/2609.32534"
+  code: https://github.com/keyu-wang-2002/DepthBench
+  doi: "10.48550/arXiv.2609.32534"
+  abstract: null
+  bibtex: |
+    @misc{wang2026depthbench,
+      title        = {DepthBench: Measuring How Residual Connections Enable More Computational Depth},
+      author       = {Keyu Wang and Yangyi Huang and Jiale Kang and David González-Martínez and Weiyang Liu and Shiwei Liu},
+      year         = {2026},
+      eprint       = {2609.32534},
+      archivePrefix= {arXiv},
+      primaryClass = {cs.LG},
+      doi          = {10.48550/arXiv.2609.32534}
     }

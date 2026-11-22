@@ -1,55 +1,31 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<section class="space-y-8">
-  <header class="mb-4">
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">{{ site.title }}</h1>
-    <p class="text-sm text-gray-600 dark:text-gray-300">
-      david.gonzalez-martinez "at" tue "dot" ellis "dot" eu
-    </p>
-    <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
-      {{ site.tagline }}
-    </p>
-
-    <div class="mt-4 flex items-center gap-10 w-full text-gray-500 dark:text-gray-400">
-      <a
-        href="https://scholar.google.com/citations?user={{ site.social.scholar }}"
-        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
-        aria-label="Google Scholar"
-      >
-        <i class="fa-solid fa-graduation-cap" style="font-size: 3rem;"></i>
-      </a>
-      <a
-        href="https://github.com/{{ site.social.github }}"
-        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
-        aria-label="GitHub"
-      >
-        <i class="fa-brands fa-github" style="font-size: 3rem;"></i>
-      </a>
-      <a
-        href="https://twitter.com/{{ site.social.twitter }}"
-        class="hover:text-gray-900 dark:hover:text-gray-100" style="padding-left: 0.5rem; padding-right: 0.5rem;"
-        aria-label="Twitter/X"
-      >
-        <i class="fa-brands fa-x-twitter" style="font-size: 3rem;"></i>
-      </a>
+<div class="intro">
+  <img class="photo" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="{{ site.title }}">
+  <div>
+    <h1>{{ site.title }}</h1>
+    <p class="affil">M.Sc. student, University of Tübingen &middot; MPI for Intelligent Systems &amp; ELLIS Institute Tübingen</p>
+    <div class="links">
+      <a href="{{ '/cv.pdf' | relative_url }}">CV</a><span class="sep">&middot;</span>
+      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}">Scholar</a><span class="sep">&middot;</span>
+      <a href="https://github.com/{{ site.social.github }}">GitHub</a><span class="sep">&middot;</span>
+      <a href="https://twitter.com/{{ site.social.twitter }}">X</a><span class="sep">&middot;</span>
+      <span class="email">david.gonzalez-martinez "at" tue "dot" ellis "dot" eu</span>
     </div>
-  </header>
-
-  <div class="prose dark:prose-invert">
-    {{ content }}
   </div>
+</div>
 
-  <section class="mt-6">
-    <h2 class="text-2xl font-semibold mb-4">News</h2>
-    <ul class="space-y-4">
-      {% for item in site.data.news limit: 8 %}
-        {% include news-item.html item=item %}
-      {% endfor %}
-    </ul>
-  </section>
+{{ content }}
 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8cbd28c6f33f46f9a81b1dca658cb824"}'></script>
-</section>
+<h2>News</h2>
+<ul class="news">
+  {% for item in site.data.news limit: 8 %}{% include news-item.html item=item %}{% endfor %}
+</ul>
+
+<h2>Papers</h2>
+{% assign pubs = site.data.papers | sort: "date" | reverse %}
+{% for pub in pubs %}{% include publication-card.html pub=pub %}{% endfor %}
+<p class="equal-note">* Equal contribution</p>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8cbd28c6f33f46f9a81b1dca658cb824"}'></script>

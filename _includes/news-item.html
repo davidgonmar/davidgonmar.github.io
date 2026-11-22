@@ -1,5 +1,1 @@
-<li class="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-  <div class="text-sm text-gray-500 dark:text-gray-400">{{ item.date | date: "%b %d, %Y" }}</div>
-  <div class="font-medium">{{ item.title }}</div>
-  {% if item.link %}<a class="text-sm underline" href="{{ item.link }}">Read more</a>{% endif %}
-</li>
+<li><span class="date">{{ include.item.date | date: "%b %Y" }}</span><span>{{ include.item.title }}{% if include.item.link %} <a href="{{ include.item.link }}">More</a>{% endif %}</span></li>

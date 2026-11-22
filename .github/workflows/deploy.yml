@@ -48,6 +48,22 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Check out CV source
+        uses: actions/checkout@v4
+        with:
+          repository: davidgonmar/cv-latex
+          ssh-key: ${{ secrets.CV_DEPLOY_KEY }}
+          path: cv-src
+
+      - name: Build CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: cv-src
+
+      - name: Add CV to site
+        run: cp cv-src/main.pdf _site/cv.pdf
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
